@@ -1,0 +1,12 @@
+<smil>
+  <head>
+    <layout>
+      <region id="Text" top="0%" width="100%" height="100%"/>
+    </layout>
+  </head>
+  <body>
+    <par duration="5000ms">
+      <text src="https://raw.githubusercontent.com/prathameshsalokhe-pixel/OOMA_Test/refs/heads/main/data_text.txt" region="Text"/>
+    </par>
+  </body>
+</smil>
