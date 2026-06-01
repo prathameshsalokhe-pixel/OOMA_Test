@@ -1,1 +1,1 @@
-sudo curl -v -X POST -H "Content-type: application/json" -d '{"to":["12058464225"],"from":"15678551840","mediaUrls":["https://raw.githubusercontent.com/prathameshsalokhe-pixel/OOMA_Test/refs/heads/main/data_text.txt"]}'  "http://msg1-cert1.cn.ooma.com:8011/omg/v1/callbacks/inteliquent"
+Русский язык — один из самых богатых и красивых в мире. На нём писали свои шедевры Толстой и Достоевский. Кстати, в русском алфавите есть интересная буква «Ё», которую в текстах часто заменяют на обычную «Е», но носители языка всё равно понимают, как правильно читать!
