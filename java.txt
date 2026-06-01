@@ -1,0 +1,22 @@
+const { exec } = require('child_process');
+
+function stopMessagingService() {
+    console.log("Attempting to stop ooma_MessagingServer.service...");
+
+    const command = 'sudo systemctl stop ooma_MessagingServer.service';
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Execution Error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`Standard Error Output: ${stderr}`);
+            return;
+        }
+
+        console.log("Service stopped successfully!");
+    });
+}
+
+stopMessagingService();
