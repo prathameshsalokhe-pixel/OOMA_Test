@@ -1,0 +1,20 @@
+import subprocess
+import sys
+
+def stop_messaging_service():
+    command = ["sudo", "systemctl", "stop", "ooma_MessagingServer.service"]
+
+    try:
+        print("Attempting to stop ooma_MessagingServer.service...")
+        # running the command and waiting for it to complete
+        result = subprocess.run(command, check=True, capture_output=True, text=True)
+        print("Service stopped successfully!")
+
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to stop service. Exit code: {e.returncode}", file=sys.stderr)
+        print(f"Error output:\n{e.stderr}", file=sys.stderr)
+    except FileNotFoundError:
+        print("Error: 'systemctl' or 'sudo' command not found on this system.", file=sys.stderr)
+
+if __name__ == "__main__":
+    stop_messaging_service()
